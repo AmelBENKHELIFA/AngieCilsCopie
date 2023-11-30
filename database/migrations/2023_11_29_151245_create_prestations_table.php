@@ -13,8 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('rendez_vous', function (Blueprint $table) {
+        Schema::create('prestations', function (Blueprint $table) {
             $table->id();
+            $table->string('nomService');
+            $table->text('description');
+            $table->integer('duree'); // En minutes, par exemple
+            $table->decimal('prix', 8, 2); // Prix avec deux décimales
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rendez_vous');
+        Schema::dropIfExists('prestations');
     }
 };

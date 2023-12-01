@@ -56,8 +56,9 @@
     </style>
 </head>
 <body class="antialiased">
-
-    <div class="site-wrap">
+  @include('navbar')
+    
+  <div class="site-wrap">
 
         <div class="site-mobile-menu">
           <div class="site-mobile-menu-header">
@@ -68,7 +69,6 @@
           <div class="site-mobile-menu-body"></div>
         </div>
 
-        @include('navbar')
         
           
 
@@ -76,7 +76,7 @@
 
     <div class="slide-one-item home-slider owl-carousel">
       
-        <div class="site-blocks-cover" style="background-image: url(images/photoBackground.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="site-blocks-cover" style="background-image: url(images/background.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
           <div class="container">
             <div class="row align-items-center justify-content-center text-center">
   
@@ -84,13 +84,13 @@
                 <h5 class="text-white font-weight-light text-uppercase">Bienvenue à ANGIE CILS </h5>
                 <h2 class="text-white font-weight-light mb-2 display-1">Où la beauté prend vie! </h2>
   
-                <p><a href="#" class="btn btn-black py-3 px-5">Book Now!</a></p>
+                <p><a href="#" class="btn btn-black py-3 px-5">Réservez!</a></p>
               </div>
             </div>
           </div>
         </div>  
   
-        <div class="site-blocks-cover" style="background-image: url(images/photoBackground.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="site-blocks-cover" style="background-image: url(images/background2.png);" data-aos="fade" data-stellar-background-ratio="0.5">
           <div class="container">
             <div class="row align-items-center justify-content-center text-center">
   
@@ -101,6 +101,8 @@
               </div>
             </div>
           </div>
+          
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
         </div>  
   
       </div>
@@ -116,7 +118,7 @@
             </div>
             <div class="col-md-6 col-lg-4">
               <figure class="h-100 hover-bg-enlarge">
-                <div class="bg-image h-100 bg-image-md-height" style="background-image: url('C:\Users\AMEL\AngieCils\public\images\apropos_img.webp');"></div>
+                <div class="bg-image h-100 bg-image-md-height" style="background-image: url('images/angie.jpg');"></div>
               </figure>
             </div>
             <div class="col-md-6 col-lg-4">
@@ -153,14 +155,16 @@
         <div class="container">
           <div class="row justify-content-center mb-5">
             <div class="col-md-7">
-              <h2 class="site-section-heading font-weight-light text-black text-center">Featured Services</h2>
+              <h2 class="site-section-heading font-weight-light text-black text-center">Nos Services</h2>
             </div>
           </div>
   
           <div class="row">
             <div class="col-md-6 col-lg-4 text-center mb-5 mb-lg-5">
               <div class="h-100 p-4 p-lg-5 bg-light site-block-feature-7">
-                <span class="icon flaticon-razor display-3 text-primary mb-4 d-block"></span>
+                <img src="images/icon1.png" alt="Eyelash Icon"style="width: 80px; height: 80px; display: block; margin: 0 auto;">
+
+                <!--span class="icon flaticon-eyelash display-3 text-primary mb-4 d-block"></span-->
                 <h3 class="text-black h4">Extensions Et Rehaussements De Cils</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</p>
                 <p><strong class="font-weight-bold text-primary">$29</strong></p>
@@ -168,7 +172,8 @@
             </div>
             <div class="col-md-6 col-lg-4 text-center mb-5 mb-lg-5">
               <div class="h-100 p-4 p-lg-5 bg-light site-block-feature-7">
-                <span class="icon flaticon-location-pin display-3 text-primary mb-4 d-block"></span>
+                <img src="images/ico2.png" alt="Eyebrow Icon"style="width: 80px; height: 80px; display: block; margin: 0 auto;">
+                <!--span class="icon flaticon-location-pin display-3 text-primary mb-4 d-block"></span-->
                 <h3 class="text-black h4">Teinture De Cils Et Sourcils</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</p>
                 <p><strong class="font-weight-bold text-primary">$46</strong></p>
@@ -176,7 +181,8 @@
             </div>
             <div class="col-md-6 col-lg-4 text-center mb-5 mb-lg-5">
               <div class="h-100 p-4 p-lg-5 bg-light site-block-feature-7">
-                <span class="icon flaticon-shave display-3 text-primary mb-4 d-block"></span>
+                <img src="images/icon3.png" alt="Eyebrow shaping Icon"style="width: 70px; height: 70px; display: block; margin: 0 auto;">
+                <!--span class="icon flaticon-shave display-3 text-primary mb-4 d-block"></span-->
                 <h3 class="text-black h4">Restructuration & Epilation Des Sourcils</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum exercitationem quae id dolorum debitis.</p>
                 <p><strong class="font-weight-bold text-primary">$24</strong></p>
@@ -191,12 +197,14 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6 mb-5">
-              <img src="images/person_1.jpg" alt="Image" class="img-md-fluid">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.5951150505216!2d2.2459381999999994!3d48.8277862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67af1fd6abf17%3A0x18bdcbf3eed2a80!2s4%20Rue%20Heinrich%2C%2092100%20Boulogne-Billancourt!5e0!3m2!1sfr!2sfr!4v1701423507368!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="col-lg-6 bg-white p-md-5 align-self-center">
-              <h2 class="display-1 text-black line-height-1 site-section-heading mb-4 pb-3">New hairstyle!</h2>
-              <p class="text-black lead"><em>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dolorem quisquam laudantium, incidunt id laborum, tempora aliquid labore minus. Nemo maxime, veniam! Fugiat odio nam eveniet ipsam atque, corrupti porro&rdquo;</em></p>
-              <p class="lead text-black">&mdash; <em>Stellla Martin</em></p>
+              <h2 class="display-1 text-black line-height-1 site-section-heading mb-4 pb-3">Localisation !</h2>
+              <p class="text-black lead">
+                4 Rue Heinrich, 92100 Boulogne-Billancourt, France</p>
+                <p class="text-black lead">Station de métro Marcel Sembat.</p>
+              <p class="lead text-black">&mdash; <em>Angie Cils</em></p>
             </div>
           </div>
         </div>
@@ -208,7 +216,7 @@
           <div class="row align-items-center justify-content-center text-center">
   
             <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
-              <h2 class="text-white font-weight-light mb-5 display-3">Experience Our Outstanding Services</h2>
+              <h2 class="text-white font-weight-light mb-5 display-3">Découvrez Nos Services Exceptionnels</h2>
               <a href="https://vimeo.com/channels/staffpicks/93951774" class="play-single-big d-inline-block popup-vimeo"><span class="icon-play"></span></a>
             </div>
           </div>
@@ -221,8 +229,13 @@
           <div class="row">
             <div class="col-lg-4">
               <div class="mb-5">
-                <h3 class="footer-heading mb-4">About Hairsal</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
+                <h3 class="footer-heading mb-4">Nos Coups De Coeur </h3>
+                <ul class="list-unstyled">
+                  <li><a href="#">L’atmosphère : Refait à neuf et lumineux.</a></li>
+                  <li><a href="#">Les spécialités de l’établissement : Extensions de cils.</a></li>
+                  <li><a href="#">Les marques et produits utilisés : Style & Cils.</a></li>
+                  <li><a href="#">Les petits plus : Super quartier.</a></li>
+                </ul>
               </div>
   
               
@@ -231,23 +244,13 @@
             <div class="col-lg-4 mb-5 mb-lg-0">
               <div class="row mb-5">
                 <div class="col-md-12">
-                  <h3 class="footer-heading mb-4">Quick Menu</h3>
+                  <h3 class="footer-heading ">L'Equipe</h3>
                 </div>
                 <div class="col-md-6 col-lg-6">
-                  <ul class="list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Barbers</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Team</a></li>
-                  </ul>
+                  <p>Professionnelle et expérimentée, c'est Angie qui vous reçoit et vous propose des prestations de qualité.</p>
                 </div>
                 <div class="col-md-6 col-lg-6">
-                  <ul class="list-unstyled">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Membership</a></li>
-                  </ul>
+                 <p></p>
                 </div>
               </div>
   
@@ -280,9 +283,7 @@
             <div class="col-md-12">
               <div class="mb-5">
                 <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
               </div>
   
               <p>

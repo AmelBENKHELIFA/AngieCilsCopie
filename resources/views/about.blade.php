@@ -68,6 +68,7 @@
      }
 </style>
 <!-- Section À propos -->
+@include('navbar')
 <div class="container about-section">
     <div class="row">
         <div class="col-md-6 about-content">

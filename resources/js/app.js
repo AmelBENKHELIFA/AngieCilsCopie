@@ -1,33 +1,30 @@
 import './bootstrap';
-
 import Alpine from 'alpinejs';
+import axios from 'axios';
 
 window.Alpine = Alpine;
-
 Alpine.start();
 
-require('./bootstrap');
+document.addEventListener('DOMContentLoaded', function () {
+    const nickname = document.getElementById('nickname');
+    const message = document.getElementById('message');
+    const submitButton = document.getElementById('submitButton');
+    const chatDiv = document.getElementById('chat');
 
+    if (submitButton) {
+        submitButton.addEventListener('click', () => {
+            axios.post('/chat', {
+                nickname: nickname.value,
+                message: message.value
+            });
+        });
+    }
 
-const nickname = document.getElementById('nickname');
-const message = document.getElementById('message');
-
-const submitButton = document.getElementById('submitButton');
-
-const chatDiv = document.getElementById('chat');
-
-submitButton.addEventListener('click', () => {
-
-    axios.post('/chat', {
-        nickname: nickname.value,
-        message: message.value
-    });
-
+    if (chatDiv) {
+        window.Echo.channel('chat').listen('.chat-message', (event) => {
+            chatDiv.innerHTML += `<div class="other break-all mt-2 ml-5 rounded-bl-none float-none bg-gray-300 mr-auto rounded-2xl p-2">
+                ${event.message} - <em> ${event.nickname} </em>
+            </div>`;
+        });
+    }
 });
-
-window.Echo.channel('chat')
-    .listen('.chat-message', (event) => {
-        chatDiv.innerHTML += `<div class="other break-all mt-2  ml-5 rounded-bl-none float-none bg-gray-300 mr-auto rounded-2xl p-2">
-        ${event.message} - <em> ${event.nickname} </em>
-      </div> `
-    });

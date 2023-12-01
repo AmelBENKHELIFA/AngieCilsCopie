@@ -840,9 +840,12 @@ select {
 .mt-8 {
   margin-top: 2rem;
 }
+<<<<<<< HEAD
 .ml-auto {
   margin-left: auto;
 }
+=======
+>>>>>>> develop
 .block {
   display: block;
 }

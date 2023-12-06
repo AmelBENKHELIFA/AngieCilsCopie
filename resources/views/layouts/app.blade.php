@@ -32,5 +32,14 @@
                 {{ $slot }}
             </main>
         </div>
+    <!-- Lodash -->
+<script src="https://cdn.jsdelivr.net/npm/lodash@4"></script>
+
+<!-- Axios -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<!-- Pusher -->
+<script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+
     </body>
 </html>
